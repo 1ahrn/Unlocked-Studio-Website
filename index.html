@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Unlocked Studio | Awesomeness Unleashed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_comics.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/justlogo.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /     
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Navbar -->
+    <nav>
+        <a class="logo_icon" href="index.html"><img class="unlocked_logo" src="images/logo.png" alt="unlocked logo"></a>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg  xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <!--
+            HOME COMICS SERVICE CONTACT ABOUT
+            -->
+            <a href="#" id="home-link" class="active">HOME</a>
+            <a href="COMICS.html">COMICS</a>
+            <a href="STORY.html">STORY</a>
+            <a href="SERVICE.html">SERVICE</a>
+            <a href="CONTACT.html">CONTACT</a>
+        </div>
+    </nav> 
+
+    <div class="text-box">   
+        <!-- Image Slider  -->
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="images/image 11.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/image 22 (1).png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/image 333.png" alt="">
+                </div>         
+            </div>
+            <div class="buttons">
+            <button  id="prev"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></button>
+            <button  id="next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <section class="course">
+        <h1>AWESOMENESS UNLEASHED</h1>
+        <h3 class="welcome">Welcome to a World of Awesomeness!</h3>
+    </section>
+       
+    <section class="course course_left">
+        <h1>COMICS SERIES</h1>
+   </section>
+   <div class="img-gallery">
+       <div class="gallery">
+           <div class="anime-card">
+               <img src="images/image cover 1.png" alt="Anime 1">
+               <button class="read-more-btn" onclick="showPopup('anime1')">Read Me</button>
+            </div>
+            <div class="anime-card">
+                <img src="images/image cover 2.png" alt="Anime 2">
+                <button class="read-more-btn" onclick="showPopup('anime2')">Read Me</button>
+            </div>
+           <div class="anime-card">
+                <img src="images/image cover 3.png" alt="Anime 3">
+                <button class="read-more-btn" onclick="showPopup('anime3')">Read Me</button>
+            </div>
+           <div class="anime-card">
+                <img src="images/image cover 3.png" alt="Anime 3">
+                <button class="read-more-btn" onclick="showPopup('anime3')">Read Me</button>
+            </div>
+       
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 square">
+                <div class="brand">Unlocked Studio</div>
+                <p class="about">Unlocked Studio is dedicated to revolutionizing the entertainment industry in Bangladesh. Our vision is to create original stories that connect with a wide range of audiences, bringing fresh ideas and creativity to the forefront. Our mission is to inspire and entertain, while helping to grow Bangladesh’s presence in the global entertainment world. We aim to elevate the art of storytelling and leave a lasting impact on the industry.
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-6 square">
+                <div class="heading">Comics & Others</div>
+                <ul class="p-list">
+                    <li><a href="#">Silverstone Part 1: Origin</a></li>
+                    <li><a href="#">Silverstone Part 2: Legacy </a></li>
+                    <li><a href="#">Agent Z</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 square">
+                <div class="heading">Links</div>
+                <ul class="l-list">
+                    <li><a href="#" class="acti">HOME</a></li>
+                    <li><a href="COMICS.html">COMICS</a></li>
+                    <li><a href="SERVICE.html">SERVICE</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li><a href="ABOUT.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 square">
+                <div class="heading">Contact</div>
+                <ul class="contact">
+                    <li><i class="fa-solid fa-house"></i> Bogra, Bangladesh, Earth</li>
+                    <li><i class="fa-solid fa-envelope"></i> unlockedoriginal@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +8801606281835</li>
+                </ul>
+            </div>
+        </div>
+        <ul class="social-media">
+            <li><a href="https://www.facebook.com/unlockedoriginal"><i class="fa-brands fa-facebook"></i></a></i></li>
+            <li><a href="https://www.instagram.com/unlocked_studio_/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@UnlockedOriginal"><i class="fa-brands fa-youtube"></a></i></li>
+        </ul>
+    </div>
+    <div class="copy">&copy; 2024 <a href="index.html" class="web_name_h">Unlocked Studio</a>. <br> Website created by <a class="dev_name" href="https://www.facebook.com/i.am.ahrn2">Arman Hossen</a>.</div>
+</footer>
+
+<script src="app.js"></script>
+<script src="script_comics.js"></script>   
+</body>
+</html>
+

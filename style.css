@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+--color-1: #1d1d1d;
+--text-color: #f0f0f0;
+--accent-color: #ff000d;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Outfit", sans-serif;
+}
+
+html{
+font-size: 15px;
+font-family: "Outfit", sans-serif;
+}
+
+body{
+background-color:var(--color-1);
+}
+
+nav{
+height: 70px;
+width: 100%;
+background-color: black;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+position: relative;
+z-index: 100;
+padding: 5px;
+}
+
+.unlocked_logo{
+width: 185px;    
+position: absolute;
+left: 15px;
+align-items: center;
+justify-content: center;
+}
+
+
+.links-container{
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+
+}
+nav a{
+height: 100%;
+padding: 0 15px;
+display: flex;
+align-items: center;
+text-decoration: none;
+color: var(--text-color);
+transition: .5s;
+font-size: 18px;
+font-weight: 450;
+
+}
+
+nav a:hover{
+background-color: var(--accent-color);
+border-radius: 8px;
+/*color: red;*/
+}
+nav a.active{
+color: red;
+}
+nav a.active:hover{
+color: rgb(255, 255, 255);
+}
+
+
+nav #home-link{
+margin-left: auto;
+}
+
+nav svg{
+fill: var(--text-color);
+}
+
+.close-sidebar-button,
+.open-sidebar-button{
+background-color: red;
+border-radius: 5px;
+margin: 7px;
+}
+
+
+#sidebar-active{
+display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+display: none;
+}
+
+@media (max-width: 720px) {
+.links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    z-index: 10000;
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+    transition: .75s ease-out;
+}
+nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: block;
+    
+}
+#sidebar-active:checked ~ .links-container{
+    padding: 10px;
+    right: 0;
+}
+#sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+}
+
+/* image slider */
+.slider{
+width: 100%;
+max-width: 100vw;
+height: 100vh;
+margin: auto;
+position: relative;
+overflow: hidden;
+}
+
+.slider .list{
+position: absolute;
+width: max-content;
+height: 100%;
+left: 0;
+top: 0;
+display: flex;
+transition: 1s;
+}
+.slider .list img{
+width: 100vw;
+max-width: 100vw;
+height: 100vh;
+object-fit: cover;
+}
+.slider .buttons{
+position: absolute;
+top: 45%;
+left: 5%;
+width: 90%;
+display: flex;
+justify-content: space-between;
+}
+.slider .buttons button{
+height: 60px;
+width: 60px;
+border-radius: 50%;
+background-color: rgba(138, 138, 138, 0.333);
+color: #ffffff;
+opacity: 0.5;
+border: none;
+font-weight: 800;
+z-index: 11;
+}
+.slider .buttons button:hover{
+opacity: 1;
+}
+
+.slider .dots{
+position: absolute;
+bottom: 40px;
+left: 0;
+color: #fff;
+width: 100%;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+}
+.slider .dots li{
+list-style: none;
+width: 10px;
+height: 10px;
+background-color: #fff;
+margin: 10px;
+border-radius: 20px;
+transition: 0.5s;
+}
+.slider .dots li.active{
+width: 30px;
+}
+
+
+@media (max-width: 720px) {
+.slider{
+    width: 100vw;
+    height: 655px;
+    background-size: contain;
+}    
+}
+
+/*end of slider css*/
+
+.title_of_comics{
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+    text-align:left;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+/* ---- course ---- */
+
+.course{
+padding-top: 50px;
+margin: auto;
+width: 90%;
+text-align: center;
+}
+.course h1{
+font-size: 37px;
+color: red;
+font-weight: 700;
+}
+.course .welcome{
+color: #ffffff;
+font-size: 18px;
+font-weight:300;
+padding: 10px;
+}
+
+.row{
+margin-top: 5%;
+display: flex;
+justify-content: space-between;
+}
+
+.course-col{
+flex-basis: 100%; 
+background-color: black;
+border-radius: 10px;
+margin-bottom: 5%;
+padding: 20px 12px;
+box-sizing: border-box;
+transition: 0.5s;
+}
+
+.course-col h3{
+text-align: center;
+font-size: 33px;
+font-weight: 600;
+margin: 10px 0;
+color: white;
+}
+.course-col p{
+text-align: left;
+font-size: 18px;
+margin: 10px 0;
+color: rgb(255, 255, 255);
+margin-bottom: 20px;
+}
+.course-col:hover{
+box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+
+.course_left{
+    text-align: left;
+    height: 40px;
+}
+.SILVERSTONE h1{
+    color: hsl(120, 100%, 55%);
+}
+.STORY h1{
+    color: hsl(0, 100%, 55%);
+}
+
+@media (max-width: 720px) {
+.row{
+    flex-direction: column;
+}    
+}
+
+
+
+
+/*footer*/  
+footer{
+    width: 100%;
+    height: auto;
+    background: hsl(0, 0%, 15%);
+    padding-bottom: 30px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px ;
+    padding-left: 30px;
+}
+.square{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 0px !important;
+    padding-bottom: 20px;
+}
+
+.brand{
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 28px;
+    color: red;
+    font-weight: bold;
+}
+.about{
+width: 100%;
+text-align: left;
+padding: 10px;
+color: white;
+margin-top: 5px;
+}
+
+.heading{
+margin-top: 20px;
+font-size: 28px;
+color: red;
+font-weight: bold;
+text-align: center;
+}
+
+.p-list{
+padding: 0;
+}
+
+.p-list li{
+display: block;
+text-align: center;
+margin: 5px 0px;
+color: white;
+}
+.p-list li a{
+text-decoration: none;
+color: white;
+}
+.p-list li a:hover{
+color: red;
+}
+
+.l-list{
+padding: 0;
+}
+
+.l-list li{
+display: block;
+text-align: center;
+margin: 5px 0px;
+color: white;
+}
+.l-list li a{
+text-decoration: none;
+color: white;
+}
+.l-list li a:hover{
+color: red;
+}
+.l-list li a.acti{
+color: red;
+}
+
+.contact{
+padding: 0;
+}
+
+.contact li{
+display: block;
+text-align: center;
+margin: 5px 0px;
+color: white;
+}
+
+.social-media{
+text-align: center;
+margin-top: 20px;
+}
+
+.social-media li{
+display: inline-flex;
+color: white;
+margin: 5px;
+font-size: 25px;
+}
+
+/*icon hover*/
+.social-media a i.fa-facebook:hover{
+color:  #17A9FD;
+}
+.social-media a i.fa-youtube:hover{
+color: #ff0000;
+}
+/* Style the hover effect for the Instagram logo */
+.social-media a i.fa-instagram:hover {
+/* Set the background gradient */
+background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+-webkit-background-clip: text;
+background-clip: text;
+/* Make the text color transparent to show the gradient */
+color: transparent;
+/* For better browser compatibility */
+-webkit-text-fill-color: transparent;
+}
+/* Optional: Ensure the icon has the right size and properties */
+.instagram-logo {
+display: inline-block;
+/* Optional: To center the icon */
+line-height: 1;
+}
+
+.social-media a,
+.copy a{
+text-decoration: none;
+color: white;
+}
+.copy{
+text-align: center;
+color: white;
+margin-top: 10px;
+font-size: 16px;
+font-weight: 600;
+}
+
+@media only screen and (max-width:767px){
+    .brand{
+        padding-left: 0px;
+    }
+    .heading{
+        text-align: left;
+    }
+    .square{
+        padding: 0px 30px !important;
+        margin-top: 10px!important;
+    }
+    .about{padding: 0px;}
+    .p-list li , .l-list li , .contact li, .about{
+        text-align: left;
+    }
+    .social-media{
+        padding-left: 0!important;
+    }
+
+    .social-media li{
+        margin: 5px;
+    }
+    footer{
+        padding-left: 0px;
+}
+}
+.web_name_h:hover{
+    color: #ff0000;
+}
+.dev_name:hover{
+color: #17A9FD;
+
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+background-color: #0f1016;
+width: 8px;
+}
+::-webkit-scrollbar-thumb {
+background: red;
+border-radius: 4px;
+}
+
+
+/*selection*/
+::selection {
+background-color: red;
+color: rgb(255, 255, 255); 
+}
+/* This is for Firefox */
+::-moz-selection {
+background-color: red;
+color: white;
+}
+
+/*about section of footer e text gula center
+*/
+    

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Visitor Count</title>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>You are visitor number: <span id="visitor-count"></span></p>
+
+    <script>
+        // Check if there's a count stored in localStorage
+        if (localStorage.getItem('page_view')) {
+            let count = localStorage.getItem('page_view');
+            count = parseInt(count) + 1; // Increment the count
+            localStorage.setItem('page_view', count); // Update the count
+        } else {
+            // If no count is stored, start with 1
+            localStorage.setItem('page_view', 1);
+        }
+        
+        // Display the count on the page
+        document.getElementById('visitor-count').textContent = localStorage.getItem('page_view');
+    </script>
+</body>
+</html>

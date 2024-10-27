@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --color-1: #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #ff000d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html{
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.unlocked_logo{
+    width: 145px;    
+    position: absolute;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+nav a{
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 450;
+    
+}
+
+nav a:hover{
+   background-color: var(--accent-color);
+   border-radius: 8px;
+   /*color: red;*/
+}
+nav a.active{
+   color: red;
+}
+nav a.active:hover{
+   color: rgb(255, 255, 255);
+}
+
+
+nav #home-link{
+    margin-left: auto;
+}
+
+nav svg{
+    fill: var(--text-color);
+}
+
+.close-sidebar-button,
+.open-sidebar-button{
+    background-color: red;
+    border-radius: 5px;
+    margin: 7px;
+}
+
+
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        z-index: 10000;
+        background-color: var(--color-1);
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: .75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        
+    }
+    #sidebar-active:checked ~ .links-container{
+        padding: 10px;
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+}
+.sm{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:  125px;
+    right: 2px;  
+    /*left: 2px; */
+}
+h2{
+    color: rgb(60, 255, 0);
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    left: 50%;    
+}
+
+.btn{
+    font-size: 20px;
+    letter-spacing: 2px;
+    bottom: 20px;
+    right: 10px;  
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color:#FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+.btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: #1f1f1f;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+/*glow*/
+.btn::before{
+   content: ""; 
+   background:linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fff800,
+    #48ff00,
+    #002bff,
+    #ff00c8,
+    #ff0000
+   );
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   background-size: 600%;
+   z-index: -1;
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   filter: blur(8px);
+   animation: glowing 20s linear infinite;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+   opacity: 0;
+}
+
+@keyframes glowing {
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+    
+}
+/*hover*/
+.btn:hover::before{
+    opacity: 1;
+}
+
+.btn:active::after{
+    background:transparent;
+}
+.btn:active{
+    color: #000;
+    font-weight: bold;
+}
+
+iframe{
+    
+    min-width: 400px;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.pdfstyle{
+    display: flex;
+    scrollbar-color: rgb(6, 243, 6);
+    background-color: transparent;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    /*hwb(120 13% 15%);*/
+    border-radius: 100px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  @media (max-width:560px) {
+    .sm{
+        top:  120px;
+    }
+    h2{
+        font-size: 32px; 
+    }
+  }
+  @media (max-width:490px) {
+    
+    h2{
+        font-size: 31px; 
+    }
+}

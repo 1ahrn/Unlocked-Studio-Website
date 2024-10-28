@@ -128,8 +128,38 @@ nav svg{
     }
 }
 
+.comics{
+    padding-top: 50px;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    }
+    .comics h1{
+    font-size: 45px;
+    color: red;
+    font-weight: 700;
+    }
+    .comics .welcome{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight:300;
+    padding: 10px;
+    }
+    @media (max-width: 720px) {
+        .comics h1{
+            font-size: 32px;
+        }
+        .comics .welcome{
+            font-size: 13px;
+        }
+    }
+    .shadow-text{
+        color: #f70000;
+        text-shadow: 0px 0pt 25px red;
+    }
+
 .custom-heading {
-    font-size: 62px; 
+    font-size: 48px; 
     font-weight: bold;
     text-align: center; 
     margin: 20px 0;

@@ -134,57 +134,32 @@ nav svg{
         z-index: 10;
     }
 }
-.sm{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top:  125px;
-    right: 2px;  
-    /*left: 2px; */
-}
-h2{
-    color: rgb(60, 255, 0);
-    font-family: "Outfit", sans-serif;
-    font-size: 40px;
-    text-align: center;
-    left: 50%;    
-}
 
-.btn{
+/*PREMIUM button desing*/
+.back-button{
     font-size: 20px;
-    letter-spacing: 2px;
-    bottom: 20px;
-    right: 10px;  
-    padding: 15px 40px;
+    top: auto;
     border: none;
     outline: none;
     color:#FFF;
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 12px;
 }
 
-.btn::after{
+.back-button::after{
     content: "";
     z-index: -1;
-    position: absolute;
-    width:100%;
-    height:100%;
-    background-color: #1f1f1f;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+    position: fixed;
+    background-color: #000000;
 }
 /*glow*/
-.btn::before{
+.back-button::before{
    content: ""; 
    background:linear-gradient(
     45deg,
     #ff0000,
-    #ff7300,
-    #fff800,
-    #48ff00,
+    gold,
     #002bff,
     #ff00c8,
     #ff0000
@@ -205,37 +180,61 @@ h2{
 
 @keyframes glowing {
     0%{background-position: 0 0;}
-    50%{background-position: 400% 0;}
+    50%{background-position: 500% 0;}
     100%{background-position: 0 0;}
     
 }
 /*hover*/
-.btn:hover::before{
+.back-button:hover::before{
     opacity: 1;
 }
 
-.btn:active::after{
+.back-button:active::after{
     background:transparent;
 }
-.btn:active{
+.back-button:active{
     color: #000;
     font-weight: bold;
 }
+/**/
 
-iframe{
+
+h1{
+    color: rgb(60, 255, 0);
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    background-image: url('images/image\ 1.1.png');
+    left: 50%;    
+}
+.pdfstyle {
+    width: 100%; 
+    height: 80vh; 
+    border: none; 
+    box-shadow: 0 14px 18px rgb(0, 0, 0); /* Add a subtle shadow */
+    padding-left: 20%;
+    padding-right: 20%;
+   
     
-    min-width: 400px;
-    width: 100%;
-    height: 100vh;
+    background-image: url('images/image\ 1.1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
-
-.pdfstyle{
-    display: flex;
-    scrollbar-color: rgb(6, 243, 6);
-    background-color: transparent;
-    scroll-behavior: smooth;
+/* Responsive for larger screens (PC) */
+@media (max-width: 720px) {
+    h1{
+        font-size: 25px;
+    }
+    .pdfstyle {
+        height: 75vh; /* Maintain height for larger screens */
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 }
+
 
 
 ::-webkit-scrollbar {

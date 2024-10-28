@@ -1,5 +1,6 @@
 // Anime information
 const animeInfo = {
+    /*
     anime1: {
         title: "SILVERSTONE PART 1: ORIGIN",
         description: "Yusuf Muhammad, also known as Silverstone, is a 14-year-old high school student whose life takes a dramatic turn when he discovers an alien power source. This mysterious force grants him extraordinary abilities, but it also thrusts him into a world of danger and responsibility far beyond his years"
@@ -19,8 +20,8 @@ const animeInfo = {
     anime5: {
         title: "Demon Slayer",
         description: "Tanjiro Kamado becomes a Demon Slayer to avenge his family and cure his sister, who was turned into a demon."
-    },
-    /*anime6: {
+    }, 
+    anime6: {
         title: "Death Note",
         description: "Light Yagami finds a supernatural notebook that grants him the power to kill anyone whose name he writes in it."
     },
@@ -57,7 +58,6 @@ const animeInfo = {
         description: "Ichigo Kurosaki, a high school student who can see ghosts, becomes a Soul Reaper and fights evil spirits known as Hollows to protect the living and the dead."
     }*/
 };
-
 // Show popup
 function showPopup(anime) {
     const popupContainer = document.getElementById("popup-container");

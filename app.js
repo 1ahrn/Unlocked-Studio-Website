@@ -59,3 +59,7 @@ document.addEventListener('keydown', function(e) {
       e.preventDefault();
     }
   });
+
+  function goBack() {
+    window.history.back(); /* Navigates back to the previous page */
+}

@@ -358,24 +358,19 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
     font-weight: bold;
     text-align: center; 
     margin: 20px 0;
+    margin-bottom: -80px;
     padding-left: 70px;
     color: #ff0000;
     text-transform: uppercase;
     text-align: left;  
     width:90%;
 }
-    @media (max-width: 720px) {
-    .custom-heading {
-        font-size: 30px; /* Adjust the size as needed */
-        font-weight: bold;
+@media (max-width: 720px) {
+    .heading-homepage {
+        font-size: 50px; /* Adjust the size as needed */
         padding-left: 20px;
     }
 }
-
-
-
-
-
 /*footer*/  
 footer{
     width: 100%;

@@ -291,6 +291,31 @@ nav svg{
     transition: opacity 0.3s ease;
 }
 
+.NEW-msg {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgb(0, 213, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+.UPCOMING-msg {
+    position: absolute;
+    top: 0;
+    left: 15.2%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgb(0, 213, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
 .anime-card:hover .read-more-btn {
     display: block;
     opacity: 1;

@@ -309,50 +309,6 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
     background-color: transparent;
 }
 
-/**/
-
-.gallery-container {
-    column-count: 4;
-    column-gap: 15px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    break-inside: avoid;
-    margin-bottom: 15px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 14px 16px rgba(0, 0, 0, 1);
-    overflow: hidden;
-}
-
-.gallery-item img {
-    width: 300px;
-    height: 400px;
-    
-    display: block;
-}
-
-@media only screen and (max-width: 1200px) {
-    .gallery-container {
-        column-count: 3;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .gallery-container {
-        column-count: 2;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .gallery-container {
-        column-count: 1;
-    }
-}
-/**/
 .heading-homepage {
     font-size: 62px; 
     font-weight: bold;
@@ -569,6 +525,81 @@ background-color: red;
 color: white;
 }
 
-/*about section of footer e text gula center
-*/
-    
+.ig {
+    width:90%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 50px;
+}
+
+.ig img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.ig img:hover {
+    transform: scale(0.95);
+    box-shadow: 0 20px 50px rgba(68, 77, 136, 0.2);
+}
+
+/* Gallery Wrapping */
+.g {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.ac {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 14px 16px rgb(0, 0, 0);
+}
+
+.ac img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ac:hover img {
+    transform: scale(1.1);
+}
+
+.read-more-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.ac:hover .read-more-btn {
+    display: block;
+    opacity: 1;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+}

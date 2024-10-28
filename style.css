@@ -1,140 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-:root{
---color-1: #1d1d1d;
---text-color: #f0f0f0;
---accent-color: #ff000d;
-}
-
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
 }
 
 html{
-font-size: 15px;
-font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
 }
 
 body{
-background-color:var(--color-1);
+    background-color: #0f1016;
 }
 
 nav{
-height: 70px;
-width: 100%;
-background-color: black;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-position: relative;
-z-index: 100;
-padding: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 .unlocked_logo{
-width: 185px;    
-position: absolute;
-left: 15px;
-align-items: center;
-justify-content: center;
+    width: 145px;    
+    position: absolute;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .links-container{
-height: 100%;
-width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
 }
 nav a{
-height: 100%;
-padding: 0 15px;
-display: flex;
-align-items: center;
-text-decoration: none;
-color: var(--text-color);
-transition: .5s;
-font-size: 18px;
-font-weight: 450;
-
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:white ;
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 450;
+    
 }
 
 nav a:hover{
-background-color: var(--accent-color);
-border-radius: 8px;
-/*color: red;*/
+   background-color: rgb(255, 0, 0);
+   border-radius: 8px;
+   /*color: red;*/
 }
 nav a.active{
-color: red;
+   color: red;
 }
 nav a.active:hover{
-color: rgb(255, 255, 255);
+   color: rgb(255, 255, 255);
 }
 
 
 nav #home-link{
-margin-left: auto;
+    margin-left: auto;
 }
 
 nav svg{
-fill: var(--text-color);
+    fill: var(--text-color);
 }
 
 .close-sidebar-button,
 .open-sidebar-button{
-background-color: red;
-border-radius: 5px;
-margin: 7px;
+    background-color: red;
+    border-radius: 5px;
+    margin: 7px;
 }
 
 
 #sidebar-active{
-display: none;
+    display: none;
 }
 .open-sidebar-button, .close-sidebar-button{
-display: none;
+    display: none;
 }
 
 @media (max-width: 720px) {
-.links-container{
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 50%;
-    z-index: 10000;
-    background-color: var(--color-1);
-    box-shadow: -5px 0 5px rgba(0,0,0,0.25);
-    transition: .75s ease-out;
-}
-nav a{
-    box-sizing: border-box;
-    height: auto;
-    width: 100%;
-    padding: 20px 30px;
-    justify-content: flex-start;
-}
-.open-sidebar-button, .close-sidebar-button{
-    display: block;
-    
-}
-#sidebar-active:checked ~ .links-container{
-    padding: 10px;
-    right: 0;
-}
-#sidebar-active:checked ~ #overlay{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        z-index: 10000;
+        background-color: #0f1016;
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: .75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        
+    }
+    #sidebar-active:checked ~ .links-container{
+        padding: 10px;
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
 }
 
 /* image slider */

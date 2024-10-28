@@ -12,7 +12,7 @@ const animeInfo = {
         title: "AGENT Z",
         description: "Agent Z is a young billionaire businessman whose life is shattered by a series of tragic losses. Driven by a thirst for justice and vengeance, he leaves behind his luxurious lifestyle to become a world-class spy."
     },
-    /*anime4: {
+    anime4: {
         title: "My Hero Academia",
         description: "In a world where nearly everyone has superpowers called Quirks, Izuku Midoriya, a Quirkless boy, dreams of becoming the greatest hero."
     },
@@ -20,7 +20,7 @@ const animeInfo = {
         title: "Demon Slayer",
         description: "Tanjiro Kamado becomes a Demon Slayer to avenge his family and cure his sister, who was turned into a demon."
     },
-    anime6: {
+    /*anime6: {
         title: "Death Note",
         description: "Light Yagami finds a supernatural notebook that grants him the power to kill anyone whose name he writes in it."
     },

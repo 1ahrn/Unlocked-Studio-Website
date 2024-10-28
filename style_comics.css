@@ -128,28 +128,70 @@ nav svg{
     }
 }
 
-
-.text-heading{
-    width: 95%;
-    height: 4rem;
-    top: 50%;
+.comics-title{
+    padding-top: 50px;
     margin: auto;
+    width: 100%;
+    text-align: center;
+    }
+.comics-title h1{
+    font-size: 50px;/**/
+    color: red;
+    font-weight: 700;
+    }
+.comics-title .welcome{
+    color: #ffffff;
+    font-size: 20px;/**/
+    font-weight:300;
+    width: 100%;
     padding: 10px;
-    font-size: 20px;
-    color: white;
-    font-family: monospace;
+}    
+    
+@media (max-width: 720px) {
+    .comics-title h1{
+        font-size: 20px;
+        color: red;
+        font-weight: bold;
+    }
+    .comics-title .welcome{
+        color: #ffffff;
+        font-size: 14px;
+        font-weight:300;
+        padding: 10px;
+    }       
+}
+    
+    
+
+
+
+.custom-heading {
+    font-size: 62px; 
+    font-weight: bold;
+    text-align: center; 
+    margin: 20px 0;
+    padding-left: 70px;
+    color: #ff0000;
     text-transform: uppercase;
-    text-align: left;
+    text-align: left;  
+    margin-bottom: -80px;
+    width:90%;
+}
+    @media (max-width: 720px) {
+    .custom-heading {
+        font-size: 30px; /* Adjust the size as needed */
+        font-weight: bold;
+        margin-bottom: -80px;
+        padding-left: 20px;
+    }
 }
 
-
-
-
+/* Default layout: For larger screens (Desktop) */
 .img-gallery {
-    width:90%;
+    width: 90%;
     margin: 100px auto 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Two images side by side */
     grid-gap: 50px;
 }
 
@@ -164,11 +206,56 @@ nav svg{
     box-shadow: 0 20px 50px rgba(68, 77, 136, 0.2);
 }
 
-/* Gallery Wrapping */
+/* For tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .img-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row for tablets */
+        grid-gap: 30px; /* Slightly reduced gap for tablets */
+    }
+}
+
+/* For mobile (less than 768px) */
+@media (max-width: 768px) {
+    .img-gallery {
+        grid-template-columns: 1fr; /* One image per row for mobile */
+        grid-gap: 20px; /* Decrease gap size for smaller screens */
+    }
+}
+
+/* Gallery Wrapping for Desktop */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Two columns for gallery on larger screens */
     gap: 20px;
+}
+
+/* Adjusting the gallery for tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Keep two columns for tablets */
+        gap: 20px;
+    }
+}
+
+/* Adjusting the gallery for mobile */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* One column for mobile */
+        gap: 20px;
+    }
+}
+
+.text-heading {
+    width: 95%;
+    height: 4rem;
+    top: 50%;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 .anime-card {
@@ -208,62 +295,7 @@ nav svg{
     display: block;
     opacity: 1;
 }
-
-/* Popup styles */
-.popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-card {
-    background-color: rgb(255, 255, 255);
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    background-color: red;
+.towardspdf{
+    text-decoration: none;
     color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50%;
-    font-size: 16px;
-}
-
-/* Animations */
-.popup-card {
-    animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 720px) {
-
-    .COMICS  h1{
-        font-size: 18px;
-    }
 }

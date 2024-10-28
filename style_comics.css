@@ -231,7 +231,7 @@ nav svg{
 .anime-card img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 9/16;
+    aspect-ratio: 4/7;
     object-fit: cover;
     transition: transform 0.3s ease;
 }

@@ -201,7 +201,6 @@ transition: 0.5s;
 width: 30px;
 }
 
-
 @media (max-width: 720px) {
 .slider{
     width: 100vw;
@@ -315,13 +314,12 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
     color: white;
 }
 
-
 .logo_icon:hover{
     background-color: transparent;
 }
 
 .heading-homepage {
-    font-size: 45px; 
+    font-size: 35px; 
     font-weight: bold;
     text-align: center; 
     margin: 20px 0;
@@ -334,6 +332,23 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
 }
 @media (max-width: 720px) {
     .heading-homepage {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+}
+.font-capi {
+    font-size: 35px; 
+    font-weight: bold;
+    text-align: center; 
+    margin: 20px 0;
+    margin-bottom: -80px;
+    padding-left: 70px;
+    color: #ff0000;
+    text-align: left;  
+    width:90%;
+}
+@media (max-width: 720px) {
+    .font-capi {
         font-size: 30px;
         padding-left: 20px;
     }
@@ -681,4 +696,7 @@ color: white;
 .back-button:active{
     color: #000;
     font-weight: bold;
+}
+.text-red{
+    color: red;
 }

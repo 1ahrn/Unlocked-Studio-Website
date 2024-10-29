@@ -292,11 +292,12 @@ nav svg{
     transform: translateX(-50%);
     padding: 10px;
     padding-left: 20px;
-    background-color: rgb(0, 213, 255);
-    color: white;
+    background-color: red;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     display: block;
+    font-weight: bold;
 }
 .UPCOMING-msg {
     position: absolute;
@@ -305,11 +306,12 @@ nav svg{
     padding-left: 20px;
     transform: translateX(-50%);
     padding: 10px;
-    background-color: rgb(0, 213, 255);
-    color: white;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     display: block;
+    font-weight: bold;
 }
 
 .anime-card:hover .read-more-btn {

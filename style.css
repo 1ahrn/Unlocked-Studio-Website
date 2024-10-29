@@ -321,7 +321,7 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
 }
 
 .heading-homepage {
-    font-size: 52px; 
+    font-size: 45px; 
     font-weight: bold;
     text-align: center; 
     margin: 20px 0;
@@ -334,12 +334,13 @@ box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
 }
 @media (max-width: 720px) {
     .heading-homepage {
-        font-size: 40px;
+        font-size: 30px;
         padding-left: 20px;
     }
 }
 /*footer*/  
 footer{
+    font-family: "Outfit", sans-serif; 
     width: 100%;
     height: auto;
     background: hsl(0, 0%, 15%);
@@ -349,6 +350,7 @@ footer{
     padding-left: 30px;
 }
 .square{
+    font-family: "Outfit", sans-serif; 
     width: 100%;
     height: auto;
     margin-top: 10px;
@@ -358,6 +360,7 @@ footer{
 }
 
 .brand{
+    font-family: "Outfit", sans-serif; 
     margin-top: 20px;
     padding-left: 10px;
     font-size: 28px;
@@ -365,6 +368,7 @@ footer{
     font-weight: bold;
 }
 .about{
+font-family: "Outfit", sans-serif; 
 width: 100%;
 text-align: left;
 padding: 10px;
@@ -373,6 +377,7 @@ margin-top: 5px;
 }
 
 .heading{
+font-family: "Outfit", sans-serif; 
 margin-top: 20px;
 font-size: 28px;
 color: red;
@@ -391,6 +396,7 @@ margin: 5px 0px;
 color: white;
 }
 .p-list li a{
+font-family: "Outfit", sans-serif; 
 text-decoration: none;
 color: white;
 }
@@ -403,12 +409,14 @@ padding: 0;
 }
 
 .l-list li{
+font-family: "Outfit", sans-serif; 
 display: block;
 text-align: center;
 margin: 5px 0px;
 color: white;
 }
 .l-list li a{
+ font-family: "Outfit", sans-serif; 
 text-decoration: none;
 color: white;
 }

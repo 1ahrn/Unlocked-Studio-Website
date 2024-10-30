@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 html{
-    font-size: 15px;
+    
     font-family: "Outfit", sans-serif;
 }
 
@@ -254,6 +255,10 @@ padding: 10px;
 .shadow-text{
     color: #f70000;
     text-shadow: 0px 0pt 25px red;
+}
+.shadow-text-black{
+    color: #f70000;
+    text-shadow: 0px 0pt 25px rgb(0, 0, 0);
 }
 
 
@@ -700,3 +705,7 @@ color: white;
 .text-red{
     color: red;
 }
+a{
+    text-decoration: none;
+    color: white;
+  }

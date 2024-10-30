@@ -13,7 +13,6 @@
 }
 
 html{
-    font-size: 15px;
     font-family: "Outfit", sans-serif;
 }
 
@@ -159,7 +158,6 @@ nav svg{
    background:linear-gradient(
     45deg,
     #ff0000,
-    gold,
     #002bff,
     #ff00c8,
     #ff0000

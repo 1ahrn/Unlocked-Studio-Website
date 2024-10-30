@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+  }  
+  body {
+    font-family: "Outfit", sans-serif;
+    font-family: Arial, sans-serif;
+    background-image: url('images/image\ 1.1.png'); 
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  } 
+  .container-sell {
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.027); /* Transparent white */
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 8px 25px rgba(60, 255, 0, 0.25); 
+    color: white; /* Text color */
+    margin: 15px auto  auto auto;
+  }
+  .comic-info {
+    text-align: left;
+    padding-left: 20px;
+    flex: 1;
+  }  
+  /*title css*/
+  .comic-title {
+    font-size: 75px;
+    font-weight: 700;
+    color: #00ff07;
+  }
+  .comic-title-sub {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .comic-title {
+      font-size: 70px;
+    }
+    .comic-title-sub {
+      font-size: 27px;
+    }
+  }
+  .comic-cover1,
+  .comic-cover2 {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin: auto;
+  }
+  .comic-cover2{
+    display: none;
+  }
+  .description {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    margin-top: 15px;
+  }
+  button {
+    padding: 10px 45px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .buy-button {
+    background-color: #28a745;
+  }
+  .preview-button {
+    background-color: #007bff;
+  }
+  .buy-button:hover {
+    background-color: #1db340;
+  }
+  .preview-button:hover {
+    background-color: #1c88fa;
+  }
+  
+  
+  
+  /* Responsive Styles for Tablets */
+  @media (max-width: 768px) {
+    .container-sell {
+      flex-direction: column;
+      align-items: center;
+      width: 96%;
+    }
+    .comic-cover2{
+        display: flex;
+    }
+    .comic-cover1{
+      display: none;
+    }    
+    .comic-info {
+      padding: 0;
+      text-align: center;
+    }
+    .comic-cover {
+      max-width: 300px;
+      aspect-ratio: 4/5;
+      margin-top: 20px;
+    }
+  
+    .description {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }

@@ -48,10 +48,10 @@
   }
   @media (max-width: 768px) {
     .comic-title {
-      font-size: 70px;
+      font-size: 40px;
     }
     .comic-title-sub {
-      font-size: 27px;
+      font-size: 30px;
     }
   }
   .comic-cover1,
@@ -69,6 +69,7 @@
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 10px;
   }
   
   .buttons {
@@ -117,12 +118,11 @@
     }
     .comic-cover {
       max-width: 300px;
-      aspect-ratio: 4/5;
       margin-top: 20px;
     }
   
     .description {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: bold;
     }
   
